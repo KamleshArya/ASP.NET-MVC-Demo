@@ -1,0 +1,36 @@
+﻿@model IEnumerable<MvcAuction.Models.Auction>
+
+@{
+    Layout = "~/Views/Shared/_LayoutWithSidebar.cshtml";
+    ViewBag.Title = "Auction List - Index Page";
+}
+
+@section Sidebar
+{
+    <h3>This is my sidebar !</h3>
+}
+
+@section Featured
+{
+    <section class="featured">
+        <div class="content-wrapper">
+            KK's Featured Content
+        </div>
+    </section>
+}
+
+@section Scripts
+{
+    <!-- This content will be rendered in the scripts section-->
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    @Html.ActionLink("Create New","Create")
+</p>
+
+@foreach (var item in Model)
+{
+    @Html.Partial("_AuctionTile",item) 
+}

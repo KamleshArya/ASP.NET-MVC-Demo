@@ -1,0 +1,21 @@
+﻿@model IEnumerable<MvcAuction.Models.Auction>
+
+@{
+    ViewBag.Title = "Auction : Mobile View";
+}
+
+@section Scripts
+{
+    <!-- This content will be rendered in the scripts section-->
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    @Html.ActionLink("Create New","Create")
+</p>
+
+@foreach (var item in Model)
+{
+    @Html.Partial("_AuctionTile",item) 
+}

@@ -1,0 +1,8 @@
+﻿ <nav>
+    <ul id="menu">
+     @foreach (string category in ViewBag.Categories)
+     {
+      <li>@Html.ActionLink(category,"Index","Auctions",new {category},null)</li>
+       }
+       </ul>
+ </nav>
